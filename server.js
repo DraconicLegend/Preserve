@@ -3,18 +3,24 @@ const Datastore = require("nedb")
 const database = new Datastore('database.db');
 database.loadDatabase();
 const path = require("path"); 
-const ejs = require("ejs");
-
 
 const app = express();
 app.listen(3000, () => console.log("Listening on Port 3000"));
 
-app.set('view engine', 'ejs');
-
 app.get('/', (req, res) => {
-  res.render('Donate')
-})
+  var options = {
+    root: path.join(__dirname)
+  };
 
+  var fileName = 'Donate.html';
+  res.sendFile(fileName, options, function (err) {
+    if (err) {
+      next(err);
+    } else {
+      console.log('Sent:', fileName);
+    }
+  });
+})
 
 app.use(express.json({ limit: '1mb' }))
 
