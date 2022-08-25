@@ -1,0 +1,143 @@
+.pic{
+  background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),url(images/Forest.webp);
+  background-attachment: fixed;
+  width: 100%;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  background: linear-gradient(to right, #00093c, #2d0b00);
+  border-top-left-radius: 125px;
+  border-bottom-right-radius: 125px;
+}
+
+.one {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: azure;
+  text-align: center;
+  height: 200px;
+  line-height: 50px;
+  margin: 10px;
+  margin-top: 100px;
+  border-radius: 100px;
+  width:100%;
+
+}
+.one p{
+  font-size: large;
+}
+
+.two {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: azure;
+  text-align: center;
+  height: 200px;
+  line-height: 50px;
+  margin: 10px;
+  margin-top: 100px;
+  border-radius: 1100px;
+  width:100%;
+
+}
+
+.three {
+  grid-column: 3;
+  grid-row: 1;
+  background-color: azure;
+  text-align: center;
+  height: 200px;
+  line-height: 50px;
+  margin: 10px;
+  margin-top: 100px;
+  border-radius: 100px;
+  width: 100%;
+}
+
+.four {
+  grid-column: 1;
+  grid-row: 2;
+  background-color: azure;
+  text-align: center;
+  height: 200px;
+  line-height: 75px;
+  margin: 10px;
+  border-radius: 100px;
+  width:100%;
+  width:100%;
+
+}
+
+.five {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: azure;
+  text-align: center;
+  height: 200px;
+  line-height: 75px;
+  margin: 10px;
+  border-radius: 100px;
+  width:100%;
+  width:100%;
+
+}
+
+.six {
+  grid-column: 3;
+  grid-row: 2;
+  background-color: azure;
+  text-align: center;
+  height: 200px;
+  line-height: 200px;
+  margin: 10px;
+  border-radius: 100px;
+}
+
+.two h2 a{
+  text-decoration: none;
+  color: black;
+}
+.three h2 a{
+  text-decoration: none;
+  color: black;
+}
+.four h2 a{
+  text-decoration: none;
+  color: black;
+}
+.five h2 a{
+  text-decoration: none;
+  color: black;
+}
+.six h2 a{
+  text-decoration: none;
+  color: black;
+}
+
+.box{
+  border-bottom: 10px;
+  border-right: 100px;
+}
+
+/* .seven {
+  grid-column: 3;
+  grid-row: 2;
+  background-color: azure;
+  text-align: center;
+  height: 200px;
+  line-height: 200px;
+
+}
+
+.eight {
+  grid-column: 4;
+  grid-row: 2;
+  background-color: azure;
+  text-align: center;
+  height: 200px;
+  line-height: 200px;
+
+} */
