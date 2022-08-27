@@ -1,5 +1,4 @@
-let input = document.getElementById("amt")
-
+let input = document.getElementById("amt");
 
 
 paypal.Buttons({
@@ -27,28 +26,44 @@ paypal.Buttons({
     // Finalize the transaction after payer approval
 
     onApprove: (data, actions) => {
-        document.getElementById("payment-form").submit(); 
+        document.getElementById("payment-form").submit();
         return actions.order.capture().then(function (orderData) {
 
             // Successful capture! For dev/demo purposes:
 
             console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
- 
+
             const transaction = orderData.purchase_units[0].payments.captures[0];
 
             alert(`Transaction ${transaction.status}: ${transaction.id}`);
-
-            // When ready to go live, remove the alert and show a success message within this page. For example:
-
-            // const element = document.getElementById('paypal-button-container');
-
-            // element.innerHTML = '<h3>Thank you for your payment!</h3>';
-
-            // Or go to another URL:  actions.redirect('thank_you.html');
+            DataUpload();
+            
+            async function DataUpload(evt) {
+                evt.preventDefault();
+            
+                let name = document.getElementById("name").value;
+                let tel = document.getElementById("tel").value;
+                let email = document.getElementById("email").value;
+                let dedic = document.getElementById("dedic").value;
+                let amount = document.getElementById("amt").value;
+                let plant = document.getElementById("typePlant").value;
+                data = { name, tel, email, dedic, amount, plant };
+                console.log(data);
+                const options = {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                };
+                const response = await fetch("/database", options);
+                const json = await response.json();
+                console.log(json);
+            }
 
         });
 
-        
+
 
     }
 
@@ -56,20 +71,21 @@ paypal.Buttons({
 
 
 
-// let submit = document.getElementById("payment-form");
-// console.log("Hello World");
+let submit = document.getElementById("payment-form");
+console.log("Hello World");
 
 
-// submit.addEventListener("submit", function (evt) {
+// submit.addEventListener("", async function (evt) {
 //     evt.preventDefault();
-//     console.log("Submitted");
+
 //     let name = document.getElementById("name").value;
 //     let tel = document.getElementById("tel").value;
 //     let email = document.getElementById("email").value;
 //     let dedic = document.getElementById("dedic").value;
 //     let amount = document.getElementById("amt").value;
 //     let plant = document.getElementById("typePlant").value;
-//     data = {name,tel,email,dedic,amount,plant };
+//     data = { name, tel, email, dedic, amount, plant };
+//     console.log(data);
 //     const options = {
 //         method: "POST",
 //         headers: {
@@ -77,9 +93,10 @@ paypal.Buttons({
 //         },
 //         body: JSON.stringify(data),
 //     };
-//     fetch("/database", options)
-//     .then(response => console.log(response.json()))
-//     // let x =document.createElement("img")
-//     // x.src="PRI213893584.avif";
-//     // document.getElementById("middle").appendChild(x)
+//     const response = await fetch("/database", options);
+//     const json = await response.json();
+//     console.log(json);
 // });
+
+// let minisub = document.getElementById("nutton");
+
