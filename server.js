@@ -1,8 +1,13 @@
+const { log } = require("console");
 const express = require("express");
 const Datastore = require("nedb")
 const database = new Datastore('database.db');
 database.loadDatabase();
 const path = require("path");
+// require('dotenv').config();
+
+// let clientid = process.env.CLIENT_ID;
+// let email = process.env.EMAIL_ADDRESS;
 
 const app = express();
 app.listen(3000, () => console.log("Listening on Port 3000"));
@@ -136,4 +141,15 @@ app.get('/alldata', (req, res) => {
 
 
 
+app.post('/post',(req,res)=>{
+  console.log(req.body);
+});
 
+
+// app.get('/email',(req,res)=>{
+//   res.send(email)
+// })
+
+// app.get('/email',(req,res)=>{
+//   console.log(email);
+// })
