@@ -6,90 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate</title>
     <script src="scripts/donate.js" defer></script>
+    <link rel="stylesheet" href="styles/donate.css" />
   </head>
   <body>
-    <b
-      ><u><h3>Dedicate your donation!</h3></u></b
-    >
-    <p>
-      If you would like to make a donation and dedicate it to someone or
-      something, please send us the information on the form below.
-    </p>
-    <br />
-    <p>
-      We will take your donation and apply it toward a plant/plants in the Long
-      Lots Preserve. Your donation will appear on our dedications page, along
-      with a photo of the subject you are recognizing. Additionally, a
-      description of your plant and its environmental benefits will be noted.
-    </p>
-
-    <b
-      ><u><h3>DEDICATION FORM</h3></u></b
-    >
-
-    <form
-      id="payment-form"
-      action="https://formsubmit.co/arebello91@gmail.com"
-      method="POST"
-    >
-      <input type="hidden" name="_next" value="https://www.google.com" />
-      <input type="hidden" name="_captcha" value="false" />
-      <div class="form-element">
-        <h3>Name: <input type="text" id="name" name="Name" /></h3>
+    
+      <div class="header">
+        <b><u><h3>Dedicate your donation!</h3></u></b>
+      <p>
+        If you would like to make a donation and dedicate it to someone or
+        something, please send us the information on the form below.
+      </p>
+      <br/>
+      <p>
+        We will take your donation and apply it toward a plant/plants in the Long
+        Lots Preserve. Your donation will appear on our dedications page, along
+        with a photo of the subject you are recognizing. Additionally, a
+        description of your plant and its environmental benefits will be noted.
+      </p>
+  
+      <b><u><h3>DEDICATION FORM</h3></u></b>
       </div>
-      <div class="form-element">
-        <h3>Phone Number: <input type="tel" id="tel" name="Phone Number" /></h3>
-
-        <p>(Optional. In case there is a question about your donation.)</p>
+      <div class="wrapper">
+      <div class="item1">
+      <form
+        id="payment-form"
+        action="https://formsubmit.co/arebello91@gmail.com"
+        method="POST"
+      >
+        <input type="hidden" name="_next" value="https://www.google.com" />
+        <input type="hidden" name="_captcha" value="false" />
+        <div class="form-element">
+          <h3>Name: <input type="text" id="name" name="Name" /></h3>
+        </div>
+        <div class="form-element">
+          <h3>Phone Number: <input type="tel" id="tel" name="Phone Number" /></h3>
+  
+          <p>(Optional. In case there is a question about your donation.)</p>
+        </div>
+        <div class="form-element">
+          <h3>
+            Email Address: <input type="email" id="email" name="Email Address" />
+          </h3>
+  
+          <p>
+            (We need this in order to send you a tax-deductible donation receipt.)
+          </p>
+        </div>
+        <div class="form-element">
+          <h3>
+            Name of dedicatee:
+            <input type="text" id="dedic" name="Name of Dedicatee" />
+          </h3>
+  
+          <p>(Please attach a photo of the dedicatee, if you wish.)</p>
+        </div>
+        <div class="form-element">
+          <h3>
+            Donation Amount: $<input
+              type="number"
+              id="amt"
+              name="Amount Donated"
+            />
+          </h3>
+        </div>
+        <div class="form-element">
+          <h3>Plant to Dedicate:</h3>
+          <select id="typePlant">
+            <option value="Plant 1" class="plantOption">Plant 1</option>
+            <option value="Plant 2" class="plantOption">Plant 2</option>
+            <option value="Plant 3" class="plantOption">Plant 3</option>
+            <option value="Plant 4" class="plantOption">Plant 4</option>
+            <option value="Plant 5" class="plantOption">Plant 5</option>
+          </select>
+          <br><br>
+        </div>
       </div>
-      <div class="form-element">
-        <h3>
-          Email Address: <input type="email" id="email" name="Email Address" />
-        </h3>
-
-        <p>
-          (We need this in order to send you a tax-deductible donation receipt.)
-        </p>
-      </div>
-      <div class="form-element">
-        <h3>
-          Name of dedicatee:
-          <input type="text" id="dedic" name="Name of Dedicatee" />
-        </h3>
-
-        <p>(Please attach a photo of the dedicatee, if you wish.)</p>
-      </div>
-      <div class="form-element">
-        <h3>
-          Donation Amount: $<input
-            type="number"
-            id="amt"
-            name="Amount Donated"
-          />
-        </h3>
-      </div>
-      <div class="form-element">
-        <h3>Plant to Dedicate:</h3>
-        <select id="typePlant">
-          <option value="Plant 1" class="plantOption">Plant 1</option>
-          <option value="Plant 2" class="plantOption">Plant 2</option>
-          <option value="Plant 3" class="plantOption">Plant 3</option>
-          <option value="Plant 4" class="plantOption">Plant 4</option>
-          <option value="Plant 5" class="plantOption">Plant 5</option>
-        </select>
-      </div>
-      <br />
-      <!-- Replace "test" with your own sandbox Business account app client ID -->
-
-      <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
-
-      <!-- Set up a container element for the button -->
-      <button type = "submit" id="nutton">Test Sub</button>
-      
-    </form>
-    <div id="paypal-button-container"></div>
-    <script id = "clientscript" src="https://www.paypal.com/sdk/js?client-id=AV_eBasHt6Cy4qn8edh08a5k1E1UaAMyVEuchmD-tgTBv3xaWu8VcgahNI-Cq0difjWh1YDSEbclXG-O&currency=USD"></script>
-    <!--https://www.youtube.com/watch?v=6r17Wj3UlNE-->
-    <!--  -->
+        <div class="item2">
+          
+        <!-- Set up a container element for the button -->
+        <button id="nutton">Test Sub</button>
+        
+  </form>
+      <div id="paypal-button-container"></div>
+      <script id = "clientscript" src="https://www.paypal.com/sdk/js?client-id=AV_eBasHt6Cy4qn8edh08a5k1E1UaAMyVEuchmD-tgTBv3xaWu8VcgahNI-Cq0difjWh1YDSEbclXG-O&currency=USD"></script>
+      <!--https://www.youtube.com/watch?v=6r17Wj3UlNE-->
+      <!--  -->
+        </div>
+    </div>
   </body>
 </html>

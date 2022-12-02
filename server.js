@@ -16,7 +16,7 @@ app.use("/styles", express.static(__dirname + '\\public\\styles'));
 app.use("/scripts", express.static(__dirname + '\\public\\scripts'));
 app.use("/images", express.static(__dirname + '\\public\\styles\\images'));
 app.use("/images", express.static(__dirname + '\\public\\images'))
-//Home Directory
+//---------------------------Home Directory------------------------
 app.get('/', (req, res) => {
   var options = {
     root: path.join(__dirname)
@@ -35,6 +35,21 @@ app.get('/', (req, res) => {
 
 
 //Home Directory
+app.get('/about', (req, res) => {
+  var options = {
+    root: path.join(__dirname)
+  };
+
+  var fileName = 'public/Timeline.html';
+  res.sendFile(fileName, options, function (err) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log('Sent:', fileName);
+    }
+  });
+})
+
 app.get('/partners', (req, res) => {
   var options = {
     root: path.join(__dirname)

@@ -16,30 +16,29 @@
 .one {
   grid-column: 1;
   grid-row: 1;
-  background-color: azure;
+  background-color: beige;
   text-align: center;
   height: 200px;
-  line-height: 50px;
+  line-height: 30px;
   margin: 10px;
+  font-size: 1.4vw;
   margin-top: 100px;
-  border-radius: 100px;
+  border-radius: 75px;
   width:100%;
 
-}
-.one p{
-  font-size: large;
 }
 
 .two {
   grid-column: 2;
   grid-row: 1;
-  background-color: azure;
+  background-color: beige;
   text-align: center;
   height: 200px;
-  line-height: 50px;
+  line-height: 30px;
   margin: 10px;
+  font-size: 1.4vw;
   margin-top: 100px;
-  border-radius: 1100px;
+  border-radius: 750px;
   width:100%;
 
 }
@@ -47,73 +46,81 @@
 .three {
   grid-column: 3;
   grid-row: 1;
-  background-color: azure;
+  background-color: beige;
   text-align: center;
   height: 200px;
-  line-height: 50px;
+  line-height: 30px;
   margin: 10px;
+  font-size: 1.4vw;
   margin-top: 100px;
-  border-radius: 100px;
+  border-radius: 75px;
   width: 100%;
 }
 
 .four {
   grid-column: 1;
   grid-row: 2;
-  background-color: azure;
+  background-color: beige;
   text-align: center;
   height: 200px;
-  line-height: 75px;
+  line-height: 30px;
   margin: 10px;
-  border-radius: 100px;
+  font-size: 1.4vw;
+  border-radius: 75px;
   width:100%;
   width:100%;
+  margin-bottom: 100px;
 
 }
 
 .five {
   grid-column: 2;
   grid-row: 2;
-  background-color: azure;
+  background-color: beige;
   text-align: center;
   height: 200px;
-  line-height: 75px;
+  line-height: 30px;
   margin: 10px;
-  border-radius: 100px;
+  font-size: 1.4vw;
+  border-radius: 75px;
   width:100%;
   width:100%;
+  margin-bottom: 100px;
 
 }
 
 .six {
   grid-column: 3;
   grid-row: 2;
-  background-color: azure;
+  background-color: beige;
   text-align: center;
   height: 200px;
-  line-height: 200px;
+  line-height: 190px;
+  font-size: 1.3vw;
   margin: 10px;
-  border-radius: 100px;
+  border-radius: 75px;
+  margin-bottom: 100px;
 }
 
+
 .two h2 a{
-  text-decoration: none;
+  /* text-decoration: none; */
   color: black;
 }
 .three h2 a{
-  text-decoration: none;
+  /* text-decoration: none; */
   color: black;
 }
 .four h2 a{
-  text-decoration: none;
+  /* text-decoration: none; */
   color: black;
 }
 .five h2 a{
-  text-decoration: none;
+  /* text-decoration: none; */
   color: black;
 }
 .six h2 a{
-  text-decoration: none;
+  /* text-decoration: none; */
   color: black;
 }
 

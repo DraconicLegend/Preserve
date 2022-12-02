@@ -26,7 +26,7 @@ paypal.Buttons({
     // Finalize the transaction after payer approval
 
     onApprove: async function (data, actions) {
-        // document.getElementById("payment-form").submit();
+        document.getElementById("payment-form").submit();
 
         return actions.order.capture().then(async function (orderData) {
             // Successful capture! For dev/demo purposes:
@@ -89,3 +89,9 @@ minisub.addEventListener("click", async function (evt) {
 // });
 // req.open("GET", "/email");//send username as a query
 // req.send();
+
+document.getElementById("nutton").onclick = function() {
+    //disable
+    this.disabled = true;
+
+}
