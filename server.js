@@ -50,6 +50,21 @@ app.get('/about', (req, res) => {
   });
 })
 
+app.get('/mission', (req, res) => {
+  var options = {
+    root: path.join(__dirname)
+  };
+
+  var fileName = 'public/Mission.html';
+  res.sendFile(fileName, options, function (err) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log('Sent:', fileName);
+    }
+  });
+})
+
 app.get('/partners', (req, res) => {
   var options = {
     root: path.join(__dirname)
