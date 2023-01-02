@@ -1,20 +1,21 @@
-.pic{
+.pic {
   background-attachment: fixed;
   width: 100%;
 }
 
-.item2 { grid-area: menu; }
-.item3 { 
-  grid-area: main; 
+.item2 {
+  grid-area: menu;
+}
+.item3 {
+  grid-area: main;
   justify-items: center;
 }
 
 .grid-container {
   display: grid;
-  grid-template-areas:
-    'menu menu menu main main main';
+  grid-template-areas: "menu menu menu main main main";
   gap: 20px;
-  background:linear-gradient(to right, #00093c, #2d0b00);
+  background: linear-gradient(to right, #00093c, #2d0b00);
   padding: 10px;
   max-height: 40vw;
 }
@@ -25,27 +26,26 @@
   font-size: 2vw;
   color: #ffffff;
 }
-.image{
+.image {
   width: 100%;
   height: 100vw;
   display: flex;
   justify-content: center;
-
 }
-.image img{
+.image img {
   height: 30vw;
   width: 30vw;
   border-radius: 50%;
-  border:10px solid white;
+  border: 10px solid white;
 }
 
-.insta{
-  background:linear-gradient(to right, #fccc63,#e95950);
+.insta {
+  background: linear-gradient(to right, #fccc63, #e95950);
   display: grid;
   justify-content: center;
   text-align: center;
 }
-.insta h1{
+.insta h1 {
   color: #ffffff;
   max-width: 540px;
   border: 5px solid purple;
