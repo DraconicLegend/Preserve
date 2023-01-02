@@ -93,5 +93,5 @@ minisub.addEventListener("click", async function (evt) {
 document.getElementById("nutton").onclick = function() {
     //disable
     this.disabled = true;
-
+    this.textContent = "Submitted";
 }

@@ -3,9 +3,9 @@
     padding: 0;
 }
 .header{
-    min-height: 100vh;
+    min-height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(images/Forest.webp);
+    background-image: linear-gradient(to right, #00093c, #2d0b00) ;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -100,7 +100,7 @@ nav img{
 }
 
 
-nav .fa{
+nav .fa-solid{
     display: none;
 }
 
@@ -116,20 +116,17 @@ nav .fa{
         position: absolute;
         background: #f44336;
         height: 100vh;
-        width: 150px;
+        width: 200px;
         top:0;
-        right:-220px;
+        right:0;
         text-align: left;
         z-index: 2;
     }
-    nav .fa{
+    nav .fa-solid{
         display: block;
         color: #fff;
         margin: 10px;
         font-size: 22px;
         cursor: pointer;
-    }
-    .nav-links ul{
-        padding: 30px;
     }
 }

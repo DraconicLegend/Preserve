@@ -100,7 +100,7 @@ nav img{
 }
 
 
-nav .fa{
+nav .fa-solid{
     display: none;
 }
 
@@ -116,20 +116,31 @@ nav .fa{
         position: absolute;
         background: #f44336;
         height: 100vh;
-        width: 150px;
+        width: 200px;
         top:0;
-        right:-220px;
+        right:0;
         text-align: left;
         z-index: 2;
     }
-    nav .fa{
+    nav .fa-solid{
         display: block;
         color: #fff;
         margin: 10px;
         font-size: 22px;
         cursor: pointer;
     }
-    .nav-links ul{
-        padding: 30px;
-    }
 }
+
+
+/* .frame{
+    width: 100%;
+    height: 100%;
+}
+
+.directory{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+} */

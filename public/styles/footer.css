@@ -1,5 +1,5 @@
 .wrap {
-  background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),url(images/Forest.webp);
+  background: linear-gradient(to right, #00093c, #2d0b00);
   background-attachment: fixed;
   width: 100%;
 }
