@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <h3>Personal Information</h3>
+        <input type="text" id="name" name="First Name" placeholder="First Name">
+        <input type="text" id="name" name="Last Name" placeholder="Last Name">
+        <input type="tel" id="tel" name="Phone Number" placeholder="Phone Number" />
+        <input type="email" id="email" name="Email Address" placeholder="Email Address" />
+        <h3>Donation Information</h3>
+        <input type="text" id="dedic" name="Name of Dedicatee" placeholder="Name of Dedicatee" />
+        <input type="number" id="amt" name="Amount to Donate" placeholder="Amount Donated" />
+        <select id="typePlant">
+            <option class="plantOption"> </option>
+            <option value="Pin Oak" class="plantOption">Pin Oak</option>
+            <option value="White Spruce" class="plantOption">White Spruce</option>
+            <option value="Tupelo" class="plantOption">Tupelo</option>
+            <option value="White Pine" class="plantOption">White Pine</option>
+            <option value="Serviceberry" class="plantOption">Serviceberry</option>
+            <option value="Gray Birch" class="plantOption">Gray Birch</option>
+            <option value="Northern Red Oak" class="plantOption">Northern Red Oak</option>
+            <option value="Swamp White Oak" class="plantOption">Swamp White Oak</option>
+            <option value="Scarlet Oak" class="plantOption">Scarlet Oak</option>
+            <option value="White Pine" class="plantOption">White Pine</option>
+            <option value="Eastern Redbud" class="plantOption">Eastern Redbud</option>
+            <option value="Shagbark Hickory" class="plantOption">Shagbark Hickory</option>
+            <option value="River Birch" class="plantOption">River Birch</option>
+            <option value="Gray Twig Dogwood" class="plantOption">Gray Twig Dogwood</option>
+        </select>
+        <h3>Payment</h3>
+        <button type="submit">Submit</button>
+    </form>
+    <!-- Payemtn stuff -->
+    <script>
+        const form = document.querySelector("form")
+        form.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            const fd = new FormData(form);
+            const obj=Object.fromEntries(fd)
+            const json = JSON.stringify(obj)
+            localStorage.setItem('form',json)
+            window.location.href = "pay.html"
+        })
+    </script>
+</body>
+
+</html>

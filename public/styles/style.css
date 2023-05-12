@@ -90,7 +90,7 @@ nav img{
     position: relative;
     cursor: pointer;
     
-    transition: 1s;
+    transition: 2s;
 }
 .hero-btn:hover{
     background: #fff;

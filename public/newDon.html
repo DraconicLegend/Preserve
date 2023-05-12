@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- https://www.youtube.com/watch?v=T76bbMVMX6M -->
+<head>
+  <link rel="stylesheet" href="styles/donatenew.css" />
+  <script src="scripts/newDon.js" defer></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <form>
+    <form id="Form1">
+      <h3>Personal Information</h3>
+      <input type="text" id="name" name="First Name" placeholder="First Name">
+      <input type="text" id="name" name="Last Name" placeholder="Last Name">
+      <input type="tel" id="tel" name="Phone Number" placeholder="Phone Number" />
+      <input type="email" id="email" name="Email Address" placeholder="Email Address" />
+      <div class="btn-box">
+        <button type="button" id="Next1">Next</button>
+      </div>
+    </form>
+    <form id="Form2">
+      <h3>Donation Information</h3>
+      <input type="text" id="dedic" name="Name of Dedicatee" placeholder="Name of Dedicatee" />
+      <input type="number" id="amt" name="Amount to Donate" placeholder="Amount Donated" />
+      <select id="typePlant">
+        <option class="plantOption"> </option>
+        <option value="Pin Oak" class="plantOption">Pin Oak</option>
+        <option value="White Spruce" class="plantOption">White Spruce</option>
+        <option value="Tupelo" class="plantOption">Tupelo</option>
+        <option value="White Pine" class="plantOption">White Pine</option>
+        <option value="Serviceberry" class="plantOption">Serviceberry</option>
+        <option value="Gray Birch" class="plantOption">Gray Birch</option>
+        <option value="Northern Red Oak" class="plantOption">Northern Red Oak</option>
+        <option value="Swamp White Oak" class="plantOption">Swamp White Oak</option>
+        <option value="Scarlet Oak" class="plantOption">Scarlet Oak</option>
+        <option value="White Pine" class="plantOption">White Pine</option>
+        <option value="Eastern Redbud" class="plantOption">Eastern Redbud</option>
+        <option value="Shagbark Hickory" class="plantOption">Shagbark Hickory</option>
+        <option value="River Birch" class="plantOption">River Birch</option>
+        <option value="Gray Twig Dogwood" class="plantOption">Gray Twig Dogwood</option>
+      </select>
+      <div class="btn-box">
+        <button type="button" id="Back1">Back</button>
+        <button type="button" id="Next2">Next</button>
+      </div>
+    </form>
+    <form id="Form3">
+      <h3>Payment</h3>
+
+      <div class="btn-box">
+        <button type="button" id="Back2">Back</button>
+        <button type="button">Submit</button>
+    </form>
+    </form>
+  </div>
+  
+    <div class="step-row">
+      <div id="progress"></div>
+      <div class="step-col"><small>Step 1</small></div>
+      <div class="step-col"><small>Step 2</small></div>
+      <div class="step-col"><small>Step 3</small></div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -125,7 +125,7 @@ app.get('/donate', (req, res) => {
     root: path.join(__dirname)
   };
 
-  var fileName = 'public/Donate.html';
+  var fileName = 'public/bestDon.html';
   res.sendFile(fileName, options, function (err) {
     if (err) {
       console.log(err);
@@ -138,7 +138,38 @@ app.get('/donate', (req, res) => {
 
 
 
+app.get('/pay', (req, res) => {
+  var options = {
+    root: path.join(__dirname)
+  };
 
+  var fileName = 'public/pay.html';
+  res.sendFile(fileName, options, function (err) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log('Sent:', fileName);
+    }
+  });
+})
+
+
+
+
+app.get('/donateSuccess', (req, res) => {
+  var options = {
+    root: path.join(__dirname)
+  };
+
+  var fileName = 'public/SuccessDon.html';
+  res.sendFile(fileName, options, function (err) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log('Sent:', fileName);
+    }
+  });
+})
 
 //---------------------------------------BACKEND STUFF------------------------------------\\
 
