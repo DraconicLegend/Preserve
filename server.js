@@ -3,6 +3,7 @@ const express = require("express");
 const Datastore = require("nedb")
 const database = new Datastore('database.db');
 database.loadDatabase();
+const fs = require("fs");
 const path = require("path");
 // require('dotenv').config();
 
@@ -180,11 +181,11 @@ app.post('/database', (req, res) => {
   database.insert({ Name: req.body.name, Telephone: req.body.tel, Email: req.body.email, DedicatedTo: req.body.dedic, AmountPaid: req.body.amount, Plant: req.body.plant })
   res.json({
     status: "success",
-    Name: req.body.name, 
-    Telephone: req.body.tel, 
-    Email: req.body.email, 
-    DedicatedTo: req.body.dedic, 
-    AmountPaid: req.body.amount, 
+    Name: req.body.name,
+    Telephone: req.body.tel,
+    Email: req.body.email,
+    DedicatedTo: req.body.dedic,
+    AmountPaid: req.body.amount,
     Plant: req.body.plant
   });
 });
@@ -200,12 +201,37 @@ app.get('/alldata', (req, res) => {
   });
 })
 
-
-
-app.post('/post',(req,res)=>{
+app.post('/post', (req, res) => {
   console.log(req.body);
 });
 
+app.post('/adduserdata', (req, res) => {
+  // Storing the JSON format data in myObject
+  var data = fs.readFileSync("data.json");
+  var myObject = JSON.parse(data);
+  console.log(myObject)
+  // Defining new data to be added
+  let newData = req.body.json
+
+  // Adding the new data to our object
+  myObject[myObject["num"] + 1] = newData
+  myObject["num"] = myObject["num"] + 1
+  // Writing to our JSON file
+  var newData2 = JSON.stringify(myObject);
+  fs.writeFile("data.json", newData2, (err) => {
+    // Error checking
+    if (err) {
+      console.log(err)
+    }
+    console.log("New data added");
+  });
+});
+
+app.get('/getuserdata', (req, res) => {
+  var data = fs.readFileSync("data.json");
+  // var myObject = JSON.parse(data);
+  res.send(data)
+});
 
 // app.get('/email',(req,res)=>{
 //   res.send(email)
