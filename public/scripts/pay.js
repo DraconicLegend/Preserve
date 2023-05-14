@@ -17,12 +17,12 @@ function combineJSON(js1, js2) {
     // console.log(obj1)
     // console.log(obj2)
     const mergedObject = {
-      ...obj1,
-      ...obj2
+        ...obj1,
+        ...obj2
     };
-    return(JSON.stringify(mergedObject))
-  }
-  
+    return (JSON.stringify(mergedObject))
+}
+
 paypal.Buttons({
 
     // Sets up the transaction when a payment button is clicked
@@ -48,19 +48,19 @@ paypal.Buttons({
     // Finalize the transaction after payer approval
 
     onApprove: async function (data, actions) {
-        
+
         return actions.order.capture().then(async function (orderData) {
             // window.location.replace("/donateSuccess"); 
             // Successful capture! For dev/demo purposes:
-    
+
             console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
             fetch("/adduserdata", {
                 method: "POST",
-                body: JSON.stringify({ json: combineJSON(jsond,JSON.stringify(orderData, null, 2))}),//Gotta send data in this format - JSON.stringify({data: dataVar})
-        
+                body: JSON.stringify({ json: combineJSON(jsond, JSON.stringify(orderData, null, 2)) }),//Gotta send data in this format - JSON.stringify({data: dataVar})
+
                 headers: { "Content-Type": "application/json" }
             }).then(console.log("Request went throguh"))
-        
+
 
             const transaction = orderData.purchase_units[0].payments.captures[0];
 
@@ -80,8 +80,7 @@ var jsn = 5
 button = document.getElementById("But")
 button.addEventListener("click", () => {
     console.log("clicked");
-    
-
+    //Was used for testing purposes
 })
 
 

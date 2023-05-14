@@ -229,7 +229,8 @@ app.post('/adduserdata', (req, res) => {
 
 app.get('/getuserdata', (req, res) => {
   var data = fs.readFileSync("data.json");
-  // var myObject = JSON.parse(data);
+  var myObj = JSON.parse(data);
+  str = JSON.stringify(myObj)
   res.send(data)
 });
 
