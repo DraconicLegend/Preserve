@@ -1,0 +1,26 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: white;/*Can change color*/
+  color: black;
+  font-size: xx-large;
+  font-family: "Cairo Play";
+  padding: 8px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+}
+td {
+  background-color: #fdfffc;/*Can change color*/
+  font-size: medium;
+  font-family: "Cairo Play";
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+tr:hover {
+  background-color: #d35b16;
+}

@@ -24,13 +24,13 @@ reqest.addEventListener("load", () => {
         // console.log(person);
         // console.log(honored);
         // console.log(spec);
-        personCell = document.createElement("th")
+        personCell = document.createElement("td")
         personCell.textContent = person
         row.appendChild(personCell)
-        honorCell = document.createElement("th")
+        honorCell = document.createElement("td")
         honorCell.textContent = honored
         row.appendChild(honorCell)
-        specCell = document.createElement("th")
+        specCell = document.createElement("td")
         specCell.textContent = spec
         row.appendChild(specCell)
         document.getElementById("table").appendChild(row)
