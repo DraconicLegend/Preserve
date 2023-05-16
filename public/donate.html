@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/footer.css" />
+  <link rel="stylesheet" href="styles/donate.css" />
+  <title>Long Lots Preserve</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Marker+Hatch&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/b00731e6e1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <section class="header">
+    <nav>
+      <div class="nav-links">
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/about">ABOUT</a></li>
+          <li><a href="/mission">Our Mission</a></li>
+          <li><a href="/partners">PARTNERS</a></li>
+          <li><a href="/contact">CONTACT</a></li>
+          <li><a href="/donate">DONATE</a></li>
+        </ul>
+      </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="hero">
+      <form>
+        <h1 id="call">Donate Today</h1>
+        <br>
+        <br>
+        <!-- The id tag makes sure the labels react accordingly -- becuase in the label element, one of the attibutes "for" links the id of the input and the label -->
+        <h3 id="smallHead">Your Information</h3>
+        <br>
+        <br>
+        <div class="input-group">
+          <input type="text" id="nameFirst" name="First Name" required />
+          <label for="nameFirst"><i class="fa-solid fa-user"></i> First Name</label>
+        </div>
+        <div class="input-group">
+          <input type="text" id="nameLast" name="Last Name" required />
+          <label for="nameLast"><i class="fa-solid fa-user"></i> Last Name</label>
+        </div>
+
+        <div class="input-group">
+          <input type="tel" id="tel" name="Phone Number" required />
+          <label for="tel"><i class="fa-solid fa-mobile-screen"></i> Phone</label>
+        </div>
+
+        <div class="input-group">
+          <input type="email" id="email" name="Email Address" required />
+          <label for="email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+        </div>
+        <h3 id="smallHead">Dedicatee Information</h3>
+        <br>
+        <br>
+        <div class="input-group">
+          <input type="text" id="dedicFirst" name="First Name of Dedicatee" required />
+          <label for="dedicFirst"><i class="fa-solid fa-envelope"></i> First Name</label>
+        </div>
+        <div class="input-group">
+          <input type="text" id="dedicLast" name="Last Name of Dedicatee" required />
+          <label for="dedicLast"><i class="fa-solid fa-envelope"></i> Last Name</label>
+        </div>
+
+        <div class="input-group">
+          <input type="number" id="amt" name="Amount to Donate" required min="0" />
+          <label for="amt"><i class="fa-solid fa-dollar-sign"></i> Amount to Donate</label>
+        </div>
+        <!-- <span class="label smallHead">Species: </span> -->
+        <h3 id="smallHead">Species Donated For:</h3>
+        <br>
+        <br>
+        <div class="input-group select-box">
+          <select id="typePlant" name="Species">
+            <option class="plantOption">Click to change!</option>
+            <option value="Pin Oak" class="plantOption">Pin Oak</option>
+            <option value="White Spruce" class="plantOption">White Spruce</option>
+            <option value="Tupelo" class="plantOption">Tupelo</option>
+            <option value="White Pine" class="plantOption">White Pine</option>
+            <option value="Serviceberry" class="plantOption">Serviceberry</option>
+            <option value="Gray Birch" class="plantOption">Gray Birch</option>
+            <option value="Northern Red Oak" class="plantOption">Northern Red Oak</option>
+            <option value="Swamp White Oak" class="plantOption">Swamp White Oak</option>
+            <option value="Scarlet Oak" class="plantOption">Scarlet Oak</option>
+            <option value="White Pine" class="plantOption">White Pine</option>
+            <option value="Eastern Redbud" class="plantOption">Eastern Redbud</option>
+            <option value="Shagbark Hickory" class="plantOption">Shagbark Hickory</option>
+            <option value="River Birch" class="plantOption">River Birch</option>
+            <option value="Gray Twig Dogwood" class="plantOption">Gray Twig Dogwood</option>
+          </select>
+          <!-- https://www.youtube.com/watch?v=3WRf6YcyIh4 used to style the select -->
+          <!-- <label for="typePlant"><i class="fa-solid fa-envelope" ></i> Tree Donated</label> -->
+        </div>
+        <button type="submit">SUBMIT</button>
+      </form>
+    </div>
+  </section>
+  <script>
+    const form = document.querySelector("form")
+    form.addEventListener('submit', (e) => {
+        console.log("Submitted");
+        e.preventDefault();
+        const fd = new FormData(form);
+        const obj = Object.fromEntries(fd)
+        console.log(obj);
+        let keys = Object.keys(obj)
+        for (let i = 0; i < keys.length; i++) {
+            obj[keys[i]]=(obj[keys[i]]).trim()
+        }
+        console.log(obj);
+        const json = JSON.stringify(obj)
+        localStorage.setItem('form', json)
+        window.location.href = "/pay"
+    })
+</script>
+</body>
+
+</html>

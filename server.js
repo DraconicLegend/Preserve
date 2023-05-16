@@ -126,7 +126,7 @@ app.get('/donate', (req, res) => {
     root: path.join(__dirname)
   };
 
-  var fileName = 'public/bestDon.html';
+  var fileName = 'public/donate.html';
   res.sendFile(fileName, options, function (err) {
     if (err) {
       console.log(err);
@@ -135,9 +135,22 @@ app.get('/donate', (req, res) => {
     }
   });
 })
+// Special Routing
+// app.get('/bigdon', (req, res) => {
+//   var options = {
+//     root: path.join(__dirname)
+//   };
 
-
-
+//   var fileName = 'public/Contact copy.html';
+//   res.sendFile(fileName, options, function (err) {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log('Sent:', fileName);
+//     }
+//   });
+// })
+//ENDS HERE
 
 app.get('/pay', (req, res) => {
   var options = {

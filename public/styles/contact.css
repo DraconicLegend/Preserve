@@ -57,7 +57,8 @@ nav img{
 nav .fa-solid{
     display: none;
 }
-
+/* EVERYTHING UNTIL THIS POINT IS NOT THE FORM */
+/* EVERYTHING FROM THSI POINT ON IS THE FORM */
 form{
     width: 90%;
     max-width: 600px;
@@ -114,7 +115,6 @@ button{
     width: 104%;
     cursor: pointer;
 }
-
 input:valid~label,input:focus~label{
     top:-35px;
     font-size: 14px;
