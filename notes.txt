@@ -1,0 +1,27 @@
+1. Add photo system	for each phase - Gallery page
+	4 phases and OUTof phase
+
+STATUS: DELAYED
+
+2. Under about,
+	add descriptiong of each phases - get from about website and replace photos
+
+Update Timeline
+I updated it, but could not put our photos -- with your permission, I would like to resort to putting alternative
+photos of items found on the preserve. Explain the problem
+
+STATUS: EXPLAIN
+
+3. Home page:
+    Take table off home page
+    Short synpopsis of what its all abouit - put a few photo
+    Keep it simple
+
+Take mission page out of header and footer
+
+STATUS: DO Tomorrow 
+
+
+
+Paste this text somewhere:
+The worst possible outcome for the town would be that the project is no longer actively managed by the Long Lots Preserve Steering Committee and the property stays in, or reverts to, its current state.

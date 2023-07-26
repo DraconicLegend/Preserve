@@ -1,0 +1,39 @@
+.pic {
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.item2 {
+  grid-area: menu;
+}
+.item3 {
+  grid-area: main;
+  justify-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "menu menu menu main main main";
+  gap: 20px;
+  background: linear-gradient(to right, #00093c, #2d0b00);
+  padding: 10px;
+  max-height: 40vw;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2vw;
+  color: #ffffff;
+}
+.image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.image img {
+  height: 30vw;
+  width: 30vw;
+  border-radius: 50%;
+  border: 10px solid white;
+}

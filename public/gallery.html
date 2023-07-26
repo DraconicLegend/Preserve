@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="scripts/gallery.js" defer></script> -->
+    <!-- <script src="scripts/docRequest.js" defer></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js" integrity="sha512-dfX5uYVXzyU8+KHqj8bjo7UkOdg18PaOtpa48djpNbZHwExddghZ+ZmzWT06R5v6NSk3ZUfsH6FNEDepLx9hPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.6.1/themes/twelve/galleria-inline.twelve.min.css" integrity="sha512-osfA8VLeCb2UlIVqF0WOb1z4ghLALySVxm28uF8SWl6BuvBaFeh6ubGooEXDKvUhacGmABcYIxzU8cVov6/lPQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- https://www.youtube.com/watch?v=_PjHweHy8Bs : Helped  -->
+    <div class="galleria" id="imageList">
+        <img src="http://drive.google.com/uc?export=view&id=1zMTvvjyJow3wc8Pk_FRvLQ7CdR4u_O76" alt="Not Appearing - reload page">
+        
+    </div>
+
+
+    <script src="https://apis.google.com/js/api.js"></script>
+<script>
+  /**
+   * Sample JavaScript code for drive.children.list
+   * See instructions for running APIs Explorer code samples locally:
+   * https://developers.google.com/explorer-help/code-samples#javascript
+   */
+
+  function authenticate() {
+    return gapi.auth2.getAuthInstance()
+        .signIn({scope: "https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.appdata https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.metadata https://www.googleapis.com/auth/drive.metadata.readonly https://www.googleapis.com/auth/drive.photos.readonly https://www.googleapis.com/auth/drive.readonly"})
+        .then(function() { console.log("Sign-in successful"); },
+              function(err) { console.error("Error signing in", err); });
+  }
+  function loadClient() {
+    gapi.client.setApiKey("YOUR_API_KEY");
+    return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/drive/v2/rest")
+        .then(function() { console.log("GAPI client loaded for API"); },
+              function(err) { console.error("Error loading GAPI client for API", err); });
+  }
+  // Make sure the client is loaded and sign-in is complete before calling this method.
+  function execute() {
+    return gapi.client.drive.children.list({
+      "folderId": "1qs_TU-GoI-mBOAZkYhFEWDWP6N2ZGXHN"
+    })
+        .then(function(response) {
+                // Handle the results here (response.result has the parsed body).
+                console.log("Response", response);
+              },
+              function(err) { console.error("Execute error", err); });
+  }
+  gapi.load("client:auth2", function() {
+    gapi.auth2.init({client_id: "YOUR_CLIENT_ID"});
+  });
+</script>
+<button onclick="authenticate().then(loadClient)">authorize and load</button>
+<button onclick="execute()">execute</button>
+
+    <!-- <script>
+        (function () {
+            Galleria.loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/themes/classic/galleria.classic.min.js');
+            // Galleria.loadTheme('galleria/themes/classic/galleria.classic.js');
+            Galleria.run('.galleria');
+        }());
+
+
+        // $(document).bind("keydown", function (e) {
+        //     if (e.keyCode == 37) {
+        //         $.galleria.next()
+        //     } else if (e.keyCode == 38) {
+        //         $.galleria.next();
+        //     } else if (e.keyCode == 39) {
+        //         $.galleria.next();
+        //     } else if (e.keyCode == 123) {
+        //         $.galleria.prev();
+        //     } else {
+        //         return true;
+        //     }
+        //     return false;
+        // });
+
+    </script> -->
+</body>
+
+</html>

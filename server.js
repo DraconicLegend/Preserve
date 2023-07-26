@@ -4,6 +4,7 @@ const Datastore = require("nedb")
 const database = new Datastore('database.db');
 database.loadDatabase();
 const fs = require("fs");
+
 const path = require("path");
 // require('dotenv').config();
 
@@ -41,22 +42,7 @@ app.get('/about', (req, res) => {
     root: path.join(__dirname)
   };
 
-  var fileName = 'public/Timeline.html';
-  res.sendFile(fileName, options, function (err) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log('Sent:', fileName);
-    }
-  });
-})
-
-app.get('/mission', (req, res) => {
-  var options = {
-    root: path.join(__dirname)
-  };
-
-  var fileName = 'public/Mission.html';
+  var fileName = 'public/About.html';
   res.sendFile(fileName, options, function (err) {
     if (err) {
       console.log(err);
@@ -185,6 +171,21 @@ app.get('/donateSuccess', (req, res) => {
   });
 })
 
+// Still testing
+// app.get('/gallery', (req, res) => {
+//   var options = {
+//     root: path.join(__dirname)
+//   };
+
+//   var fileName = 'public/gallery.html';
+//   res.sendFile(fileName, options, function (err) {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log('Sent:', fileName);
+//     }
+//   });
+// })
 //---------------------------------------BACKEND STUFF------------------------------------\\
 
 
@@ -254,3 +255,21 @@ app.get('/getuserdata', (req, res) => {
 // app.get('/email',(req,res)=>{
 //   console.log(email);
 // })
+
+app.get('/getfiles', (req, res) => {
+  url = "https://www.googleapis.com/drive/v2/files?q='1qs_TU-GoI-mBOAZkYhFEWDWP6N2ZGXHN'+in+parents&key=AIzaSyDaa0Q82vP9KVgPQr7n3bweX7iS_8Ujq70"
+  resd = "Not a test"
+  // You haveto use .then() to do somethign with the value of the Promise of an async fucntion
+  getFile(url).then((respon) => {
+    resd = respon;
+    console.log(resd);
+    res.send(resd);
+  })
+});
+
+async function getFile(urls) {
+  
+  // let theResponse = await fetch(urls)
+  return theResponse
+}
+
