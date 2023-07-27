@@ -8,14 +8,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: black; */
-  /* background-image: url(images/forestDark.jpg); */
-  /* background-image: linear-gradient(rgba(0,0,0,0.7),#b53535),url(images/donBack.jpg); */
-  /* background-position: ; */
-  background: linear-gradient(-45deg, #ee7752, #c5879f, #23a6d5, #23d5ab);
+  /* The following 4 lines are ratchet. Unfortunetly they aren't aestetically pleasing */
+  /* background: linear-gradient(-45deg, #ee77524f, #c5879f4f, #23a6d54f, #23d5ab4f), url(images/background_phase1.webp);
   background-size: 400% 400%;
   background-position: initial;
-  animation: gradient 15s ease infinite;
+  animation: gradient 100s ease infinite; */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),url(images/background_beautiful.webp);
+  padding-bottom: 40px;
 }
 @keyframes gradient {
   0% {

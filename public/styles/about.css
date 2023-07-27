@@ -3,7 +3,7 @@
     padding: 0;
 }
 .header{
-    min-height: 50vh;
+    /* min-height: 50vh; */
     width: 100%;
     background-image: linear-gradient(to right, #00093c, #2d0b00) ;
     background-position: center;
